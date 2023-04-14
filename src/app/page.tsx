@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <nav className="flex justify-around items-center z-50 bg-gray-500 opacity-70 fixed top-0 left-0 right-0">
 
-        <img src="/logo.svg" alt="Anas" width={110} height={105} />
+        <img src="/logo.svg" alt="Anas" width={110} height={105} className="select-none" />
         <div >
           <Nbar />
         </div>
@@ -104,27 +104,30 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="flex  items-start justify-around  h-screen w-full mt-24 p-8 bg-gray-200">
+      <main className="flex  items-start justify-around  h-screen w-full mt-24 p-10 bg-gray-200">
         <div className=" flex flex-col   w-1/2">
           <h1 className="text-5xl text-center  font-extrabold text-teal-500 leading-8">
             Why to join
           </h1>
-          <div className="list-disc flex justify-center items-center border-4 border-red-200 flex-col  w-full h-full  mt-4">
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing  Aperiam
+          <div className="text-left list-none flex justify-center items-center  text-xl   font-semibold tracking-widest leading-7   flex-col  w-full h-full  mt-4 ">
+            <li className="mt-2">
+              Own product (Full-Stack App Templates AR and VR Experience, andAPIs).
             </li>
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            <li className="mt-2">
+              Offer a service at a rate of 50$ per hour ($96,000 per year).
             </li>
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            <li className="mt-2">
+              Fantastic opportunity  to better their financial situation.
             </li>
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            <li className="mt-2">
+              Boost economy by expanding software export.
             </li>
           </div>
+          <div className="mt-7">
+            <Button item="Join Now" />
+          </div>
         </div>
-        <div className="  border-red-300 w-1/2   ">
+        <div className=" w-1/2   ">
           <div className=" text-2xl font-bold">
             <div className="grid grid-cols-2">
               <div className="relative bottom-4 border-4 flex flex-col items-center  justify-center w-52  h-40 shadow-lg shadow-gray-400 rounded-xl m-4 bg-gray-100 text-center p-4 ">
