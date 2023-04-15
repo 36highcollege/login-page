@@ -28,7 +28,7 @@ export default function Nbar() {
                 {NavItem.map((item: any) => (
                     <>
                         <div className="hover:mb-4  hover:underline  hover:text-green-500 font-bold text-xl transition-all duration-700 ">
-                            <div className="cursor-pointer">
+                            <div className="cursor-pointer select-none">
                                 {item.lable}
                             </div>
                         </div>

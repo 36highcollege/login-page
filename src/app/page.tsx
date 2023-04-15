@@ -16,6 +16,7 @@ import Button from './buttons';
 export default function Home() {
   const [value, setvalue] = useState(false)
   const { theme, setTheme } = useTheme();
+  console.log(setTheme)
   return (
     <>
       <nav className="flex justify-around items-center z-50 bg-gray-500 opacity-70 fixed top-0 left-0 right-0">
@@ -31,7 +32,7 @@ export default function Home() {
           <div> | </div>
 
           <div>
-            {theme === "light" ? <MdDarkMode size={24} onClick={() => { setTheme("dark") }} /> : <MdOutlineLightMode size={24} fill="Yellow" onClick={() => { setTheme("light") }} />}
+            {theme === "light" ? (<MdDarkMode size={24} onClick={() => { setTheme("dark") }} />) : (<MdOutlineLightMode size={24} fill="Yellow" onClick={() => { setTheme("light") }} />)}
           </div>
         </div>
 
@@ -104,22 +105,22 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="flex  items-start justify-around  h-screen w-full mt-24 p-10 bg-gray-200">
+      <main className="flex text-black items-start justify-around  h-full w-full mt-24 p-10 bg-gray-200">
         <div className=" flex flex-col   w-1/2">
           <h1 className="text-5xl text-center  font-extrabold text-teal-500 leading-8">
             Why to join
           </h1>
-          <div className="text-left list-none flex justify-center items-center  text-xl   font-semibold tracking-widest leading-7   flex-col  w-full h-full  mt-4 ">
-            <li className="mt-2">
+          <div className="text-left list-disc flex justify-center items-center  text-xl   font-semibold tracking-widest leading-7   flex-col  w-full h-full  mt-4 ">
+            <li className="mt-2 ">
               Own product (Full-Stack App Templates AR and VR Experience, andAPIs).
             </li>
-            <li className="mt-2">
+            <li className="mt-2 ">
               Offer a service at a rate of 50$ per hour ($96,000 per year).
             </li>
-            <li className="mt-2">
+            <li className="mt-2 ">
               Fantastic opportunity  to better their financial situation.
             </li>
-            <li className="mt-2">
+            <li className="mt-2 ">
               Boost economy by expanding software export.
             </li>
           </div>
@@ -159,7 +160,31 @@ export default function Home() {
         </div>
       </main>
 
+      <main className="mt-8 w-full h-full">
+        <div className="text-5xl font-extrabold text-center text-teal-500">
+          <p>Our Partners</p>
+        </div>
+        <div className="flex justify-evenly items-center m-2 mt-6
+         shadow-md shadow-teal-400">
+          <img src="partner (5).svg" alt="part" />
+          <img src="partner (4).svg" alt="part" />
+          <img src="partner (2).svg" alt="part" />
+          <img src="partner (3).svg" alt="part" />
+          <img src="partner (6).svg" alt="part" />
+          <img src="partner (7).svg" alt="part" />
+          <img src="partner (1).svg" alt="part" />
+        </div>
+      </main>
 
+      <main className="mt-24">
+        <div className="border-4 border-red-400 ">
+          <h2 className=" text-teal-500 text-center">Student Feedback</h2>
+          <div className=" border-4 border-amber-300">rem ipsum dolor sit amet consectetur adipisicing elit. Architecto inve
+            <p className="my-16 border-4 h-52 w-[30rem]   ">Lontore maiores nemo molestiae odio, adipisci recusandae. Eaque distinctio laborum, laboriosam, exercitationem atque porro nesciunt praesentium, in dolorum ipsum tempore temporibus. Distinctio molestias repudiandae dolores, dolorem corrupti voluptas error quibusdam, sed modi vel esse perferendis culpa.</p>
+          </div>
+        </div>
+        <div></div>
+      </main>
     </>
   )
 }
