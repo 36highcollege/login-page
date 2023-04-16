@@ -10,6 +10,10 @@ import { useState } from "react";
 import Nbar from './navbar';
 import Mbnav from '@/MBnavbar';
 import Button from './buttons';
+import City from "@/city";
+import Partner from "@/partner";
+import UPevent from "@/Upevent";
+import Letterpad from "@/letterpad";
 
 
 
@@ -18,7 +22,7 @@ export default function Home() {
   const { theme, setTheme } = useTheme();
   console.log(setTheme)
   return (
-    <>
+    <div className="overflow-hidden">
       <nav className="flex justify-around items-center z-50 bg-gray-500 opacity-70 fixed top-0 left-0 right-0">
 
         <img src="/logo.svg" alt="Anas" width={110} height={105} className="select-none" />
@@ -160,31 +164,56 @@ export default function Home() {
         </div>
       </main>
 
-      <main className="mt-8 w-full h-full">
-        <div className="text-5xl font-extrabold text-center text-teal-500">
-          <p>Our Partners</p>
-        </div>
-        <div className="flex justify-evenly items-center m-2 mt-6
-         shadow-md shadow-teal-400">
-          <img src="partner (5).svg" alt="part" />
-          <img src="partner (4).svg" alt="part" />
-          <img src="partner (2).svg" alt="part" />
-          <img src="partner (3).svg" alt="part" />
-          <img src="partner (6).svg" alt="part" />
-          <img src="partner (7).svg" alt="part" />
-          <img src="partner (1).svg" alt="part" />
-        </div>
-      </main>
+      <Partner />
 
-      <main className="mt-24">
-        <div className="border-4 border-red-400 ">
-          <h2 className=" text-teal-500 text-center">Student Feedback</h2>
-          <div className=" border-4 border-amber-300">rem ipsum dolor sit amet consectetur adipisicing elit. Architecto inve
-            <p className="my-16 border-4 h-52 w-[30rem]   ">Lontore maiores nemo molestiae odio, adipisci recusandae. Eaque distinctio laborum, laboriosam, exercitationem atque porro nesciunt praesentium, in dolorum ipsum tempore temporibus. Distinctio molestias repudiandae dolores, dolorem corrupti voluptas error quibusdam, sed modi vel esse perferendis culpa.</p>
+      <div className="mt-24" >
+        <div className=" text-black">
+          <h2 className=" text-teal-500  text-center">Student Feedback</h2>
+          <div className="flex max-w-5xl  mt-14">
+            <div className=" border-4   relative top-20 left-14 border-teal-500 bg-slate-100 rounded-xl my-16 px-24 py-10 h-92 w-[31rem]">
+              <div className="  absolute right-6  ">
+                <img src="Vector (1).svg" alt="vec" />
+              </div>
+              <div className="flex">
+                <img src="pic.jpg" alt="pic" width={70} height={70} />
+                <div>
+                  <h2 className="m-2 underline text-teal-500">Anas.G </h2>
+                  <h5 className="text-xl font-serif">
+                    Software Engineer
+                  </h5  >
+                </div>
+              </div>
+              <p className=" text-center mt-4"  >Lontore maiores nemo molestiae odio, adipisci recusandae. Eaque distinctio laborum, laboriosam, exercitationem atque porro nesciunt praesentium, in dolorum ipsum tempore temporibus. Distinctio molestias repudiandae dolores, dolorem corrupti voluptas error quibusdam, sed modi vel esse perferendis cash.</p>
+              <img src="Vector (2).svg" alt="vec" className="absolute  left-6" />
+            </div>
+
+            <div className=" border-4 border-teal-400 rounded-2xl my-16 relative  bottom-24 left-2   text-start p-4  h-56 w-96 bg-slate-100">
+              <div className="  absolute right-4  ">
+                <img src="Vector (1).svg" alt="vec" className="" />
+              </div>
+              <div className="flex">
+                <img src="pic.jpg" alt="pic" width={70} />
+                <div>
+                  <h4 className="m-2 underline text-2xl font-bold text-teal-500">Anas.G </h4>
+                  <h5 className="text-xl font-serif">
+                    Software Engineer
+                  </h5  >
+                </div>
+              </div>
+              <p className="text-center"> Anas developer site amet consectetur adipisicing elit. Architecto invention of so. Lontore maiores nemonate molestiae odio, adipiscilice recusandae.</p>
+              <img src="Vector (2).svg" alt="vec" className="absolute left-4 bottom-4" />
+
+            </div>
           </div>
         </div>
-        <div></div>
-      </main>
-    </>
+      </div>
+
+      <City />
+
+      <UPevent />
+
+      <Letterpad />
+
+    </div>
   )
 }
